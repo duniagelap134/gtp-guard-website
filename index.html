@@ -4,160 +4,197 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GTP Guard — PT Gada Tunggal Perkasa | Jasa Keamanan & Outsourcing SDM</title>
-  <meta name="description" content="GTP Guard (PT Gada Tunggal Perkasa) — penyedia jasa pengamanan dan outsourcing tenaga kerja profesional bersertifikat sejak 2005. Basis di NTB, melayani seluruh Indonesia." />
+  <meta name="description" content="GTP Guard (PT Gada Tunggal Perkasa) — penyedia jasa pengamanan & outsourcing tenaga kerja profesional bersertifikat sejak 2005. Basis di NTB, melayani seluruh Indonesia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.30.0/dist/tabler-icons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { ink:'#0D0D0D', charcoal:'#1A1A1A', brand:'#C8102E', branddark:'#791F1F', paper:'#F5F5F5', line:'#E5E5E5' },
+        fontFamily: { sans:['Inter','sans-serif'], head:['Poppins','sans-serif'], display:['Playfair Display','serif'] }
+      }}
+    };
+  </script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <span class="brand__mark">GTP</span>
-        <span class="brand__name">GTP<span>GUARD</span><span class="brand__sub">PT Gada Tunggal Perkasa</span></span>
+<body class="bg-white text-charcoal antialiased">
+
+  <header class="sticky top-0 z-50 bg-charcoal/95 backdrop-blur border-b border-white/10">
+    <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-md bg-brand grid place-items-center"><i class="ti ti-shield-check text-white text-lg"></i></span>
+        <span class="font-head font-semibold text-white tracking-tight">GTP <span class="text-brand">Guard</span></span>
       </a>
-      <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      <ul class="nav__links">
-        <li><a href="index.html" class="active">Beranda</a></li>
-        <li><a href="tentang.html">Tentang</a></li>
-        <li><a href="layanan.html">Layanan</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-        <li class="nav__cta"><a class="btn btn--primary" href="kontak.html">Hubungi Kami</a></li>
+      <ul class="hidden md:flex items-center gap-1 text-sm text-[#D3D1C7]">
+        <li><a class="px-3 py-2 rounded-md text-white" href="index.html">Beranda</a></li>
+        <li><a class="px-3 py-2 rounded-md hover:text-white transition" href="tentang.html">Tentang</a></li>
+        <li><a class="px-3 py-2 rounded-md hover:text-white transition" href="layanan.html">Layanan</a></li>
+        <li><a class="px-3 py-2 rounded-md hover:text-white transition" href="portfolio.html">Portofolio</a></li>
+        <li><a class="px-3 py-2 rounded-md hover:text-white transition" href="kontak.html">Kontak</a></li>
       </ul>
+      <a href="kontak.html" class="hidden md:inline-flex items-center gap-2 bg-brand hover:bg-branddark transition text-white text-sm font-medium px-4 py-2 rounded-md">Hubungi Kami</a>
+      <button id="navToggle" class="md:hidden text-white text-2xl" aria-label="Menu"><i class="ti ti-menu-2"></i></button>
+    </nav>
+    <div id="mobileMenu" class="hidden md:hidden bg-charcoal px-5 pb-4 border-t border-white/10">
+      <a class="menu-link" href="index.html">Beranda</a>
+      <a class="menu-link" href="tentang.html">Tentang</a>
+      <a class="menu-link" href="layanan.html">Layanan</a>
+      <a class="menu-link" href="portfolio.html">Portofolio</a>
+      <a class="menu-link" href="kontak.html">Kontak</a>
+      <a class="menu-link text-brand" href="kontak.html">Hubungi Kami →</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <span class="hero__badge">⭐ Berpengalaman lebih dari 17 tahun</span>
-      <h1>Mitra Terpercaya untuk <span>Keamanan</span> &amp; Tenaga Kerja Profesional</h1>
-      <p class="hero__tagline">Supervising Preventively, Guarding Protectively</p>
-      <p class="hero__lead">PT Gada Tunggal Perkasa menyediakan jasa pengamanan dan outsourcing sumber daya manusia bersertifikat untuk instansi pemerintah, perbankan, perhotelan, dan korporasi di seluruh Indonesia.</p>
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="kontak.html">Minta Penawaran</a>
-        <a class="btn btn--ghost" href="layanan.html">Lihat Layanan</a>
+  <!-- Hero -->
+  <section class="relative bg-charcoal overflow-hidden">
+    <div class="absolute inset-0 dotgrid opacity-60"></div>
+    <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand opacity-10 blur-2xl"></div>
+    <div class="relative max-w-6xl mx-auto px-5 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-white text-xs px-3 py-1.5 rounded-full mb-5">
+          <i class="ti ti-star-filled text-brand"></i> PT. Gada Tunggal Perkasa · Est. 2005
+        </span>
+        <h1 class="font-head font-bold text-white text-4xl md:text-5xl leading-tight mb-4">Supervising Preventively, <span class="text-brand">Guarding</span> Protectively</h1>
+        <p class="text-[#B4B2A9] text-base md:text-lg leading-relaxed mb-8 max-w-md">Jasa pengamanan & outsourcing tenaga kerja profesional bersertifikat. Berpengalaman lebih dari 17 tahun melayani instansi pemerintah, perbankan, dan korporasi di seluruh Indonesia.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="kontak.html" class="inline-flex items-center gap-2 bg-brand hover:bg-branddark transition text-white font-medium px-6 py-3 rounded-md">Minta Penawaran <i class="ti ti-arrow-right"></i></a>
+          <a href="layanan.html" class="inline-flex items-center gap-2 border border-white/30 hover:bg-white/10 transition text-white px-6 py-3 rounded-md">Lihat Layanan</a>
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur">
+          <div class="flex items-center gap-3 pb-4 border-b border-white/10">
+            <span class="w-11 h-11 rounded-lg bg-brand/15 grid place-items-center"><i class="ti ti-certificate text-brand text-xl"></i></span>
+            <div><p class="text-white font-medium">Tenaga Bersertifikat</p><p class="text-[#8d8b83] text-sm">Pelatihan Mabes POLRI</p></div>
+          </div>
+          <div class="flex items-center gap-3 py-4 border-b border-white/10">
+            <span class="w-11 h-11 rounded-lg bg-brand/15 grid place-items-center"><i class="ti ti-shield-lock text-brand text-xl"></i></span>
+            <div><p class="text-white font-medium">Legalitas Lengkap</p><p class="text-[#8d8b83] text-sm">Izin resmi POLRI & Disnaker</p></div>
+          </div>
+          <div class="flex items-center gap-3 pt-4">
+            <span class="w-11 h-11 rounded-lg bg-brand/15 grid place-items-center"><i class="ti ti-map-pin text-brand text-xl"></i></span>
+            <div><p class="text-white font-medium">Jangkauan Nasional</p><p class="text-[#8d8b83] text-sm">14 provinsi di Indonesia</p></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="container">
-    <div class="stats">
-      <div class="stat"><div class="stat__num">2005</div><div class="stat__label">Tahun Berdiri</div></div>
-      <div class="stat"><div class="stat__num">10.000+</div><div class="stat__label">Tenaga Kerja Disalurkan</div></div>
-      <div class="stat"><div class="stat__num">14</div><div class="stat__label">Provinsi Jangkauan</div></div>
-      <div class="stat"><div class="stat__num">6</div><div class="stat__label">Kategori Layanan</div></div>
+  <!-- Stats -->
+  <section class="bg-paper border-b border-line">
+    <div class="max-w-6xl mx-auto px-5 grid grid-cols-2 md:grid-cols-4 divide-x divide-line">
+      <div class="py-7 text-center"><p class="font-head font-bold text-3xl text-brand">2005</p><p class="text-sm text-gray-500 mt-1">Tahun berdiri</p></div>
+      <div class="py-7 text-center"><p class="font-head font-bold text-3xl text-brand">10.000+</p><p class="text-sm text-gray-500 mt-1">Tenaga kerja disalurkan</p></div>
+      <div class="py-7 text-center"><p class="font-head font-bold text-3xl text-brand">14</p><p class="text-sm text-gray-500 mt-1">Provinsi jangkauan</p></div>
+      <div class="py-7 text-center"><p class="font-head font-bold text-3xl text-brand">6</p><p class="text-sm text-gray-500 mt-1">Kategori layanan</p></div>
     </div>
-  </div>
+  </section>
 
-  <section class="section">
-    <div class="container split">
-      <div class="reveal">
-        <p class="section-kicker">Tentang GTP Guard</p>
-        <h2 class="section-title">Profesional, Terpercaya, Bertanggung Jawab</h2>
-        <p>Didirikan di Kota Mataram, Nusa Tenggara Barat pada 2005, GTP Guard telah berkembang menjadi salah satu perusahaan jasa outsourcing terkemuka di Indonesia. Kami berkomitmen menghadirkan layanan dengan prinsip <em>trust</em>, <em>professional</em>, dan <em>responsibility</em>.</p>
-        <p>Dengan sinergi bersama POLRI, TNI, dan instansi resmi, seluruh tenaga kami terdidik, terlatih, dan bersertifikat untuk memberikan rasa aman bagi para stakeholder.</p>
-        <a class="btn btn--dark" href="tentang.html">Pelajari Selengkapnya</a>
+  <!-- About teaser -->
+  <section class="max-w-6xl mx-auto px-5 py-20 grid md:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <p class="font-display text-brand text-lg mb-1">Tentang Kami</p>
+      <h2 class="font-head font-bold text-3xl mb-4">Profesional, Terpercaya, Bertanggung Jawab</h2>
+      <p class="text-gray-600 mb-4 leading-relaxed">Didirikan di Kota Mataram, NTB pada 2005, GTP Guard berkembang menjadi salah satu perusahaan jasa outsourcing terkemuka di Indonesia. Kami mengedepankan prinsip <em>trust</em>, <em>professional</em>, dan <em>responsibility</em> dalam setiap layanan.</p>
+      <p class="text-gray-600 mb-6 leading-relaxed">Melalui sinergi bersama POLRI, TNI, dan instansi resmi, seluruh tenaga kami terdidik, terlatih, dan bersertifikat.</p>
+      <a href="tentang.html" class="inline-flex items-center gap-2 text-brand font-medium hover:gap-3 transition-all">Pelajari selengkapnya <i class="ti ti-arrow-right"></i></a>
+    </div>
+    <div class="reveal grid grid-cols-2 gap-4">
+      <div class="border border-line rounded-xl p-5 card-hover"><i class="ti ti-users text-brand text-2xl"></i><p class="font-head font-semibold mt-3">Seleksi Ketat</p><p class="text-sm text-gray-500 mt-1">Rekrutmen & pelatihan profesional.</p></div>
+      <div class="border border-line rounded-xl p-5 card-hover"><i class="ti ti-circle-check text-brand text-2xl"></i><p class="font-head font-semibold mt-3">Zero Complain</p><p class="text-sm text-gray-500 mt-1">Komitmen win-win solution.</p></div>
+      <div class="border border-line rounded-xl p-5 card-hover"><i class="ti ti-building-store text-brand text-2xl"></i><p class="font-head font-semibold mt-3">One Stop Service</p><p class="text-sm text-gray-500 mt-1">Solusi pengadaan SDM satu pintu.</p></div>
+      <div class="border border-line rounded-xl p-5 card-hover"><i class="ti ti-award text-brand text-2xl"></i><p class="font-head font-semibold mt-3">Berpengalaman</p><p class="text-sm text-gray-500 mt-1">17+ tahun dipercaya customer.</p></div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="bg-paper py-20">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="font-display text-brand text-lg mb-1">Layanan Kami</p>
+        <h2 class="font-head font-bold text-3xl mb-3">6 Kategori Sumber Daya Manusia</h2>
+        <p class="text-gray-600">Solusi efisien dalam pengadaan tenaga kerja profesional di berbagai bidang industri.</p>
       </div>
-      <div class="panel reveal">
-        <h3>Kenapa Memilih Kami?</h3>
-        <ul class="feature-list" style="--c:#fff">
-          <li style="color:#fff;border-color:rgba(255,255,255,0.15)">Tenaga bersertifikat Mabes POLRI</li>
-          <li style="color:#fff;border-color:rgba(255,255,255,0.15)">One stop service pengadaan SDM</li>
-          <li style="color:#fff;border-color:rgba(255,255,255,0.15)">Komitmen win-win &amp; zero complain</li>
-          <li style="color:#fff;border-color:rgba(255,255,255,0.15)">Legalitas lengkap &amp; resmi</li>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="reveal bg-white border border-line rounded-xl p-6 card-hover"><span class="w-12 h-12 rounded-lg bg-[#FCEBEB] grid place-items-center mb-4"><i class="ti ti-shield-lock text-branddark text-2xl"></i></span><h3 class="font-head font-semibold text-lg">Pengamanan</h3><p class="text-sm text-gray-500 mt-1">Korporasi, pribadi (VIP/VVIP), acara, dan aset.</p></div>
+        <div class="reveal bg-white border border-line rounded-xl p-6 card-hover"><span class="w-12 h-12 rounded-lg bg-[#FCEBEB] grid place-items-center mb-4"><i class="ti ti-briefcase text-branddark text-2xl"></i></span><h3 class="font-head font-semibold text-lg">Perkantoran</h3><p class="text-sm text-gray-500 mt-1">Sekretaris, teller, admin, operator, OB, cleaning.</p></div>
+        <div class="reveal bg-white border border-line rounded-xl p-6 card-hover"><span class="w-12 h-12 rounded-lg bg-[#FCEBEB] grid place-items-center mb-4"><i class="ti ti-building-skyscraper text-branddark text-2xl"></i></span><h3 class="font-head font-semibold text-lg">Perhotelan</h3><p class="text-sm text-gray-500 mt-1">Staf reservasi, koki, house keeper, waiters.</p></div>
+        <div class="reveal bg-white border border-line rounded-xl p-6 card-hover"><span class="w-12 h-12 rounded-lg bg-[#FCEBEB] grid place-items-center mb-4"><i class="ti ti-shopping-cart text-branddark text-2xl"></i></span><h3 class="font-head font-semibold text-lg">Perdagangan</h3><p class="text-sm text-gray-500 mt-1">Kasir, pramuniaga, staf gudang, admin lapangan.</p></div>
+        <div class="reveal bg-white border border-line rounded-xl p-6 card-hover"><span class="w-12 h-12 rounded-lg bg-[#FCEBEB] grid place-items-center mb-4"><i class="ti ti-car text-branddark text-2xl"></i></span><h3 class="font-head font-semibold text-lg">Transportasi</h3><p class="text-sm text-gray-500 mt-1">Supir pribadi/perusahaan, valet, kasir parkir.</p></div>
+        <div class="reveal bg-white border border-line rounded-xl p-6 card-hover"><span class="w-12 h-12 rounded-lg bg-[#FCEBEB] grid place-items-center mb-4"><i class="ti ti-truck-delivery text-branddark text-2xl"></i></span><h3 class="font-head font-semibold text-lg">Ekspedisi</h3><p class="text-sm text-gray-500 mt-1">Pengiriman, sortir, pengepakan, bongkar muat.</p></div>
+      </div>
+      <div class="text-center mt-10"><a href="layanan.html" class="inline-flex items-center gap-2 border border-charcoal hover:bg-charcoal hover:text-white transition px-6 py-3 rounded-md font-medium">Detail Layanan</a></div>
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section class="max-w-6xl mx-auto px-5 py-20">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <p class="font-display text-brand text-lg mb-1">Dipercaya Oleh</p>
+      <h2 class="font-head font-bold text-3xl">Klien &amp; Mitra Kami</h2>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <div class="logo-cell border border-line rounded-lg py-6 grid place-items-center font-head font-semibold text-gray-700">Bank Mandiri</div>
+      <div class="logo-cell border border-line rounded-lg py-6 grid place-items-center font-head font-semibold text-gray-700">Bank BCA</div>
+      <div class="logo-cell border border-line rounded-lg py-6 grid place-items-center font-head font-semibold text-gray-700">Bank BNI</div>
+      <div class="logo-cell border border-line rounded-lg py-6 grid place-items-center font-head font-semibold text-gray-700">Alfamart</div>
+      <div class="logo-cell border border-line rounded-lg py-6 grid place-items-center font-head font-semibold text-gray-700">Kementerian PUPR</div>
+      <div class="logo-cell border border-line rounded-lg py-6 grid place-items-center font-head font-semibold text-gray-700">PDAM Tirta Dharma</div>
+      <div class="logo-cell border border-line rounded-lg py-6 grid place-items-center font-head font-semibold text-gray-700">Eco Regions</div>
+      <div class="logo-cell border border-line rounded-lg py-6 grid place-items-center font-head font-semibold text-gray-700">Atri Distribusindo</div>
+    </div>
+    <div class="text-center mt-8"><a href="portfolio.html" class="inline-flex items-center gap-2 text-brand font-medium hover:gap-3 transition-all">Lihat semua klien <i class="ti ti-arrow-right"></i></a></div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-charcoal">
+    <div class="max-w-6xl mx-auto px-5 py-16 text-center">
+      <h2 class="font-head font-bold text-white text-3xl mb-3">Butuh Tenaga Pengamanan atau SDM Profesional?</h2>
+      <p class="text-[#B4B2A9] max-w-xl mx-auto mb-7">Tim kami siap menyiapkan solusi pengadaan SDM yang tepat untuk kebutuhan bisnis Anda.</p>
+      <a href="kontak.html" class="inline-flex items-center gap-2 bg-brand hover:bg-branddark transition text-white font-medium px-7 py-3 rounded-md">Hubungi Kami Sekarang <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-ink text-[#cdc7c1]">
+    <div class="max-w-6xl mx-auto px-5 py-14 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-8 h-8 rounded-md bg-brand grid place-items-center"><i class="ti ti-shield-check text-white text-lg"></i></span>
+          <span class="font-head font-semibold text-white">GTP <span class="text-brand">Guard</span></span>
+        </div>
+        <p class="text-sm max-w-sm leading-relaxed">PT Gada Tunggal Perkasa — jasa pengamanan & outsourcing tenaga kerja profesional bersertifikat. Melayani sejak 2005.</p>
+        <div class="flex gap-2 mt-4">
+          <a href="#" class="w-9 h-9 rounded-md bg-white/10 hover:bg-brand transition grid place-items-center text-white"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" class="w-9 h-9 rounded-md bg-white/10 hover:bg-brand transition grid place-items-center text-white"><i class="ti ti-brand-x"></i></a>
+          <a href="#" class="w-9 h-9 rounded-md bg-white/10 hover:bg-brand transition grid place-items-center text-white"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#" class="w-9 h-9 rounded-md bg-white/10 hover:bg-brand transition grid place-items-center text-white"><i class="ti ti-brand-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-head font-semibold text-white mb-3">Tautan</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-white" href="index.html">Beranda</a></li>
+          <li><a class="hover:text-white" href="tentang.html">Tentang Kami</a></li>
+          <li><a class="hover:text-white" href="layanan.html">Layanan</a></li>
+          <li><a class="hover:text-white" href="portfolio.html">Portofolio</a></li>
+          <li><a class="hover:text-white" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-head font-semibold text-white mb-3">Kontak</h4>
+        <ul class="space-y-2 text-sm">
+          <li>JL. At-Taqwa Blok A No. 24, Labuapi, Lombok Barat, NTB 83361</li>
+          <li>+62 370 648359</li>
+          <li>direktur.ptrgtp@gmail.com</li>
+          <li>www.gtpguard.com</li>
         </ul>
       </div>
     </div>
-  </section>
-
-  <section class="section section--alt">
-    <div class="container">
-      <div class="center" style="max-width:720px">
-        <p class="section-kicker">Layanan Kami</p>
-        <h2 class="section-title">6 Kategori Sumber Daya Manusia</h2>
-        <p class="section-lead center">Solusi efisien dalam pengadaan tenaga kerja profesional di berbagai bidang industri.</p>
-      </div>
-      <div class="grid grid--3">
-        <div class="card reveal"><div class="card__icon">🛡️</div><h3>Pengamanan</h3><p>Pengamanan korporasi, pribadi (VIP/VVIP), acara, dan aset.</p></div>
-        <div class="card reveal"><div class="card__icon">🏢</div><h3>Perkantoran</h3><p>Sekretaris, teller, staf admin, operator, office boy, cleaning service.</p></div>
-        <div class="card reveal"><div class="card__icon">🏨</div><h3>Perhotelan</h3><p>Staf reservasi, koki, house keeper, dan waiters.</p></div>
-        <div class="card reveal"><div class="card__icon">🛒</div><h3>Perdagangan</h3><p>Kasir, pramuniaga, staf gudang, dan staf admin lapangan.</p></div>
-        <div class="card reveal"><div class="card__icon">🚗</div><h3>Transportasi</h3><p>Supir pribadi/perusahaan, juru parkir valet, dan kasir parkir.</p></div>
-        <div class="card reveal"><div class="card__icon">📦</div><h3>Ekspedisi</h3><p>Tenaga pengiriman, sortir, pengepakan, dan bongkar muat.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="center" style="max-width:720px">
-        <p class="section-kicker">Dipercaya Oleh</p>
-        <h2 class="section-title">Klien &amp; Mitra Kami</h2>
-        <p class="section-lead center">Dari perbankan nasional hingga instansi pemerintah, di NTB dan berbagai provinsi.</p>
-      </div>
-      <div class="client-grid">
-        <div class="client-chip">Bank Mandiri</div>
-        <div class="client-chip">Bank BCA</div>
-        <div class="client-chip">Bank BNI</div>
-        <div class="client-chip">Alfamart</div>
-        <div class="client-chip">Kementerian PUPR</div>
-        <div class="client-chip">PDAM Tirta Dharma</div>
-        <div class="client-chip">Eco Regions Indonesia</div>
-        <div class="client-chip">PT Atri Distribusindo</div>
-      </div>
-      <div class="center" style="margin-top:30px">
-        <a class="btn btn--dark" href="portfolio.html">Lihat Semua Klien</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-band">
-    <div class="container">
-      <h2>Butuh Tenaga Pengamanan atau SDM Profesional?</h2>
-      <p>Tim kami siap membantu menyiapkan solusi pengadaan SDM yang tepat untuk kebutuhan bisnis Anda.</p>
-      <a class="btn btn--ghost" href="kontak.html" style="border-color:#fff">Hubungi Kami Sekarang</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a class="brand" href="index.html" style="margin-bottom:14px;display:inline-flex">
-            <span class="brand__mark">GTP</span>
-            <span class="brand__name">GTP<span>GUARD</span><span class="brand__sub">PT Gada Tunggal Perkasa</span></span>
-          </a>
-          <p style="font-size:0.9rem;max-width:320px">Jasa pengamanan &amp; outsourcing tenaga kerja profesional bersertifikat. Melayani sejak 2005.</p>
-          <div class="footer-social">
-            <a href="#" title="Facebook">FB</a>
-            <a href="#" title="X">X</a>
-            <a href="#" title="Instagram">IG</a>
-            <a href="#" title="YouTube">YT</a>
-          </div>
-        </div>
-        <div>
-          <h4>Tautan</h4>
-          <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="tentang.html">Tentang Kami</a></li>
-            <li><a href="layanan.html">Layanan</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Kontak</h4>
-          <ul>
-            <li>JL. At-Taqwa Blok A No. 24, Perum. Lingkar Muslim, Desa Bajur, Labuapi, Lombok Barat, NTB 83361</li>
-            <li>Telp: +62 370 648359</li>
-            <li>Email: direktur.ptrgtp@gmail.com</li>
-            <li>www.gtpguard.com</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        © <span id="year"></span> PT Gada Tunggal Perkasa (GTP Guard). Mataram · Kupang · Sumbawa · Denpasar · Surabaya · Makassar · Jakarta.
-      </div>
-    </div>
+    <div class="border-t border-white/10 py-5 text-center text-xs text-[#8c8680]">© <span id="year"></span> PT Gada Tunggal Perkasa (GTP Guard) · Mataram · Kupang · Sumbawa · Denpasar · Surabaya · Makassar · Jakarta</div>
   </footer>
 
   <script src="assets/js/main.js"></script>
