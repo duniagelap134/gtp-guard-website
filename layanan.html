@@ -5,165 +5,181 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Layanan — GTP Guard | Jasa Pengamanan & Outsourcing SDM</title>
   <meta name="description" content="6 kategori layanan outsourcing GTP Guard: Pengamanan, Perkantoran, Perhotelan, Perdagangan, Transportasi, dan Ekspedisi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.30.0/dist/tabler-icons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { ink:'#0D0D0D', charcoal:'#1A1A1A', brand:'#C8102E', branddark:'#791F1F', paper:'#F5F5F5', line:'#E5E5E5' },
+      fontFamily: { sans:['Inter','sans-serif'], head:['Poppins','sans-serif'], display:['Playfair Display','serif'] }
+    }}};
+  </script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <span class="brand__mark">GTP</span>
-        <span class="brand__name">GTP<span>GUARD</span><span class="brand__sub">PT Gada Tunggal Perkasa</span></span>
+<body class="bg-white text-charcoal antialiased">
+
+  <header class="sticky top-0 z-50 bg-charcoal/95 backdrop-blur border-b border-white/10">
+    <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-md bg-brand grid place-items-center"><i class="ti ti-shield-check text-white text-lg"></i></span>
+        <span class="font-head font-semibold text-white tracking-tight">GTP <span class="text-brand">Guard</span></span>
       </a>
-      <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      <ul class="nav__links">
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="tentang.html">Tentang</a></li>
-        <li><a href="layanan.html" class="active">Layanan</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-        <li class="nav__cta"><a class="btn btn--primary" href="kontak.html">Hubungi Kami</a></li>
+      <ul class="hidden md:flex items-center gap-1 text-sm text-[#D3D1C7]">
+        <li><a class="px-3 py-2 rounded-md hover:text-white transition" href="index.html">Beranda</a></li>
+        <li><a class="px-3 py-2 rounded-md hover:text-white transition" href="tentang.html">Tentang</a></li>
+        <li><a class="px-3 py-2 rounded-md text-white" href="layanan.html">Layanan</a></li>
+        <li><a class="px-3 py-2 rounded-md hover:text-white transition" href="portfolio.html">Portofolio</a></li>
+        <li><a class="px-3 py-2 rounded-md hover:text-white transition" href="kontak.html">Kontak</a></li>
       </ul>
+      <a href="kontak.html" class="hidden md:inline-flex items-center gap-2 bg-brand hover:bg-branddark transition text-white text-sm font-medium px-4 py-2 rounded-md">Hubungi Kami</a>
+      <button id="navToggle" class="md:hidden text-white text-2xl" aria-label="Menu"><i class="ti ti-menu-2"></i></button>
+    </nav>
+    <div id="mobileMenu" class="hidden md:hidden bg-charcoal px-5 pb-4 border-t border-white/10">
+      <a class="menu-link" href="index.html">Beranda</a>
+      <a class="menu-link" href="tentang.html">Tentang</a>
+      <a class="menu-link" href="layanan.html">Layanan</a>
+      <a class="menu-link" href="portfolio.html">Portofolio</a>
+      <a class="menu-link" href="kontak.html">Kontak</a>
+      <a class="menu-link text-brand" href="kontak.html">Hubungi Kami →</a>
     </div>
   </header>
 
-  <section class="hero page-hero">
-    <div class="container">
-      <p class="breadcrumb">Beranda / Layanan</p>
-      <h1>Layanan Kami</h1>
-      <p class="hero__lead" style="margin-left:0">One stop service pengadaan SDM. Semua tenaga kerja telah melalui seleksi ketat dan pelatihan profesional sesuai bidangnya.</p>
+  <section class="relative bg-charcoal overflow-hidden">
+    <div class="absolute inset-0 dotgrid opacity-60"></div>
+    <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-brand opacity-10 blur-2xl"></div>
+    <div class="relative max-w-6xl mx-auto px-5 py-16">
+      <p class="text-brand text-xs font-medium tracking-widest uppercase mb-3">Beranda / Layanan</p>
+      <h1 class="font-head font-bold text-white text-4xl md:text-5xl">Layanan Kami</h1>
+      <p class="text-[#B4B2A9] mt-3 max-w-xl">One stop service pengadaan SDM. Semua tenaga kerja telah melalui seleksi ketat dan pelatihan profesional sesuai bidangnya.</p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="grid grid--2">
-        <div class="card reveal">
-          <div class="card__icon">🛡️</div>
-          <h3>Pengamanan</h3>
-          <p>Tenaga pengaman terdidik dan bersertifikat untuk berbagai instansi.</p>
-          <div class="tag-list">
-            <span class="tag">Pengamanan Korporasi</span>
-            <span class="tag">Pengamanan Pribadi (VIP/VVIP)</span>
-            <span class="tag">Pengamanan Acara</span>
-            <span class="tag">Pengamanan Aset</span>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card__icon">🏢</div>
-          <h3>Perkantoran</h3>
-          <p>Tenaga kerja profesional untuk operasional perkantoran.</p>
-          <div class="tag-list">
-            <span class="tag">Sekretaris</span>
-            <span class="tag">Teller</span>
-            <span class="tag">Staf Admin</span>
-            <span class="tag">Operator Telepon</span>
-            <span class="tag">Office Boy</span>
-            <span class="tag">Cleaning Service</span>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card__icon">🏨</div>
-          <h3>Perhotelan</h3>
-          <p>SDM andal untuk bisnis hospitality dan restoran.</p>
-          <div class="tag-list">
-            <span class="tag">Staf Reservasi</span>
-            <span class="tag">Koki / Juru Masak</span>
-            <span class="tag">House Keeper</span>
-            <span class="tag">Waiters</span>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card__icon">🛒</div>
-          <h3>Perdagangan</h3>
-          <p>Tenaga kerja untuk retail, supermarket, dan distributor.</p>
-          <div class="tag-list">
-            <span class="tag">Kasir</span>
-            <span class="tag">Pramuniaga</span>
-            <span class="tag">Staf Gudang</span>
-            <span class="tag">Staf Admin Lapangan</span>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card__icon">🚗</div>
-          <h3>Transportasi</h3>
-          <p>Tenaga andal di bidang jasa transportasi dan parkir.</p>
-          <div class="tag-list">
-            <span class="tag">Supir Pribadi</span>
-            <span class="tag">Supir Perusahaan</span>
-            <span class="tag">Juru Parkir Valet</span>
-            <span class="tag">Kasir Parkir</span>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card__icon">📦</div>
-          <h3>Ekspedisi</h3>
-          <p>Tenaga kerja untuk jasa ekspedisi, gudang, dan kargo.</p>
-          <div class="tag-list">
-            <span class="tag">Tenaga Pengiriman</span>
-            <span class="tag">Tenaga Sortir</span>
-            <span class="tag">Tenaga Pengepakan</span>
-            <span class="tag">Tenaga Bongkar Muat</span>
-          </div>
-        </div>
+  <section class="max-w-6xl mx-auto px-5 py-20 grid sm:grid-cols-2 gap-6">
+    <div class="reveal bg-white border border-line rounded-2xl p-7 card-hover">
+      <span class="w-12 h-12 rounded-lg bg-[#FCEBEB] grid place-items-center mb-4"><i class="ti ti-shield-lock text-branddark text-2xl"></i></span>
+      <h3 class="font-head font-semibold text-xl mb-2">Pengamanan</h3>
+      <p class="text-sm text-gray-500 mb-4">Tenaga pengaman terdidik dan bersertifikat untuk berbagai instansi.</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Pengamanan Korporasi</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Pengamanan Pribadi (VIP/VVIP)</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Pengamanan Acara</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Pengamanan Aset</span>
+      </div>
+    </div>
+    <div class="reveal bg-white border border-line rounded-2xl p-7 card-hover">
+      <span class="w-12 h-12 rounded-lg bg-[#FCEBEB] grid place-items-center mb-4"><i class="ti ti-briefcase text-branddark text-2xl"></i></span>
+      <h3 class="font-head font-semibold text-xl mb-2">Perkantoran</h3>
+      <p class="text-sm text-gray-500 mb-4">Tenaga kerja profesional untuk operasional perkantoran.</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Sekretaris</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Teller</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Staf Admin</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Operator Telepon</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Office Boy</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Cleaning Service</span>
+      </div>
+    </div>
+    <div class="reveal bg-white border border-line rounded-2xl p-7 card-hover">
+      <span class="w-12 h-12 rounded-lg bg-[#FCEBEB] grid place-items-center mb-4"><i class="ti ti-building-skyscraper text-branddark text-2xl"></i></span>
+      <h3 class="font-head font-semibold text-xl mb-2">Perhotelan</h3>
+      <p class="text-sm text-gray-500 mb-4">SDM andal untuk bisnis hospitality dan restoran.</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Staf Reservasi</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Koki / Juru Masak</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">House Keeper</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Waiters</span>
+      </div>
+    </div>
+    <div class="reveal bg-white border border-line rounded-2xl p-7 card-hover">
+      <span class="w-12 h-12 rounded-lg bg-[#FCEBEB] grid place-items-center mb-4"><i class="ti ti-shopping-cart text-branddark text-2xl"></i></span>
+      <h3 class="font-head font-semibold text-xl mb-2">Perdagangan</h3>
+      <p class="text-sm text-gray-500 mb-4">Tenaga kerja untuk retail, supermarket, dan distributor.</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Kasir</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Pramuniaga</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Staf Gudang</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Staf Admin Lapangan</span>
+      </div>
+    </div>
+    <div class="reveal bg-white border border-line rounded-2xl p-7 card-hover">
+      <span class="w-12 h-12 rounded-lg bg-[#FCEBEB] grid place-items-center mb-4"><i class="ti ti-car text-branddark text-2xl"></i></span>
+      <h3 class="font-head font-semibold text-xl mb-2">Transportasi</h3>
+      <p class="text-sm text-gray-500 mb-4">Tenaga andal di bidang jasa transportasi dan parkir.</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Supir Pribadi</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Supir Perusahaan</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Juru Parkir Valet</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Kasir Parkir</span>
+      </div>
+    </div>
+    <div class="reveal bg-white border border-line rounded-2xl p-7 card-hover">
+      <span class="w-12 h-12 rounded-lg bg-[#FCEBEB] grid place-items-center mb-4"><i class="ti ti-truck-delivery text-branddark text-2xl"></i></span>
+      <h3 class="font-head font-semibold text-xl mb-2">Ekspedisi</h3>
+      <p class="text-sm text-gray-500 mb-4">Tenaga kerja untuk jasa ekspedisi, gudang, dan kargo.</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Tenaga Pengiriman</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Tenaga Sortir</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Tenaga Pengepakan</span>
+        <span class="bg-paper text-xs font-medium px-3 py-1 rounded-full">Tenaga Bongkar Muat</span>
       </div>
     </div>
   </section>
 
-  <section class="section section--alt">
-    <div class="container split">
+  <section class="bg-paper py-20">
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
       <div class="reveal">
-        <p class="section-kicker">Standar Kami</p>
-        <h2 class="section-title">Win-Win Solution &amp; Zero Complain</h2>
-        <p>Setiap tenaga kerja yang kami rekrut telah memenuhi persyaratan administrasi, latar belakang pendidikan, dan keterampilan sesuai bidangnya — melalui proses seleksi ketat dan pelatihan oleh petugas profesional.</p>
+        <p class="font-display text-brand text-xl mb-1">Standar Kami</p>
+        <h2 class="font-head font-bold text-3xl mb-4">Win-Win Solution &amp; Zero Complain</h2>
+        <p class="text-gray-600 leading-relaxed">Setiap tenaga kerja yang kami rekrut telah memenuhi persyaratan administrasi, latar belakang pendidikan, dan keterampilan sesuai bidangnya — melalui proses seleksi ketat dan pelatihan oleh petugas profesional.</p>
       </div>
-      <ul class="feature-list reveal">
-        <li>Seleksi ketat &amp; pelatihan profesional</li>
-        <li>Tenaga bersertifikat instansi resmi</li>
-        <li>Solusi efisien satu pintu (one stop service)</li>
-        <li>Kemitraan mutual simbiosis berkelanjutan</li>
+      <ul class="reveal space-y-3">
+        <li class="flex items-start gap-3 bg-white border border-line rounded-lg p-4"><i class="ti ti-circle-check text-brand text-xl"></i><span class="font-medium">Seleksi ketat &amp; pelatihan profesional</span></li>
+        <li class="flex items-start gap-3 bg-white border border-line rounded-lg p-4"><i class="ti ti-circle-check text-brand text-xl"></i><span class="font-medium">Tenaga bersertifikat instansi resmi</span></li>
+        <li class="flex items-start gap-3 bg-white border border-line rounded-lg p-4"><i class="ti ti-circle-check text-brand text-xl"></i><span class="font-medium">Solusi efisien satu pintu (one stop service)</span></li>
+        <li class="flex items-start gap-3 bg-white border border-line rounded-lg p-4"><i class="ti ti-circle-check text-brand text-xl"></i><span class="font-medium">Kemitraan mutual simbiosis berkelanjutan</span></li>
       </ul>
     </div>
   </section>
 
-  <section class="cta-band">
-    <div class="container">
-      <h2>Butuh Tenaga Kerja untuk Bidang Tertentu?</h2>
-      <p>Sampaikan kebutuhan Anda, kami siapkan SDM yang sesuai.</p>
-      <a class="btn btn--ghost" href="kontak.html" style="border-color:#fff">Minta Penawaran</a>
+  <section class="bg-charcoal">
+    <div class="max-w-6xl mx-auto px-5 py-16 text-center">
+      <h2 class="font-head font-bold text-white text-3xl mb-3">Butuh Tenaga Kerja untuk Bidang Tertentu?</h2>
+      <p class="text-[#B4B2A9] max-w-xl mx-auto mb-7">Sampaikan kebutuhan Anda, kami siapkan SDM yang sesuai.</p>
+      <a href="kontak.html" class="inline-flex items-center gap-2 bg-brand hover:bg-branddark transition text-white font-medium px-7 py-3 rounded-md">Minta Penawaran <i class="ti ti-arrow-right"></i></a>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a class="brand" href="index.html" style="margin-bottom:14px;display:inline-flex">
-            <span class="brand__mark">GTP</span>
-            <span class="brand__name">GTP<span>GUARD</span><span class="brand__sub">PT Gada Tunggal Perkasa</span></span>
-          </a>
-          <p style="font-size:0.9rem;max-width:320px">Jasa pengamanan &amp; outsourcing tenaga kerja profesional bersertifikat. Melayani sejak 2005.</p>
+  <footer class="bg-ink text-[#cdc7c1]">
+    <div class="max-w-6xl mx-auto px-5 py-14 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-8 h-8 rounded-md bg-brand grid place-items-center"><i class="ti ti-shield-check text-white text-lg"></i></span>
+          <span class="font-head font-semibold text-white">GTP <span class="text-brand">Guard</span></span>
         </div>
-        <div>
-          <h4>Tautan</h4>
-          <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="tentang.html">Tentang Kami</a></li>
-            <li><a href="layanan.html">Layanan</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Kontak</h4>
-          <ul>
-            <li>JL. At-Taqwa Blok A No. 24, Labuapi, Lombok Barat, NTB 83361</li>
-            <li>Telp: +62 370 648359</li>
-            <li>Email: direktur.ptrgtp@gmail.com</li>
-          </ul>
-        </div>
+        <p class="text-sm max-w-sm leading-relaxed">PT Gada Tunggal Perkasa — jasa pengamanan & outsourcing tenaga kerja profesional bersertifikat. Melayani sejak 2005.</p>
       </div>
-      <div class="footer-bottom">© <span id="year"></span> PT Gada Tunggal Perkasa (GTP Guard).</div>
+      <div>
+        <h4 class="font-head font-semibold text-white mb-3">Tautan</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-white" href="index.html">Beranda</a></li>
+          <li><a class="hover:text-white" href="tentang.html">Tentang Kami</a></li>
+          <li><a class="hover:text-white" href="layanan.html">Layanan</a></li>
+          <li><a class="hover:text-white" href="portfolio.html">Portofolio</a></li>
+          <li><a class="hover:text-white" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-head font-semibold text-white mb-3">Kontak</h4>
+        <ul class="space-y-2 text-sm">
+          <li>JL. At-Taqwa Blok A No. 24, Labuapi, Lombok Barat, NTB 83361</li>
+          <li>+62 370 648359</li>
+          <li>direktur.ptrgtp@gmail.com</li>
+        </ul>
+      </div>
     </div>
+    <div class="border-t border-white/10 py-5 text-center text-xs text-[#8c8680]">© <span id="year"></span> PT Gada Tunggal Perkasa (GTP Guard)</div>
   </footer>
 
   <script src="assets/js/main.js"></script>
