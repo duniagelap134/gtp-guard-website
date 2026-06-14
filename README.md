@@ -1,48 +1,51 @@
 # GTP Guard — Website Profil Perusahaan
 
 Website statis multi-halaman untuk **PT Gada Tunggal Perkasa (GTP Guard)**.
-Stack: HTML + CSS + JavaScript vanilla. Tanpa framework, tanpa build step.
+
+**Stack:** HTML + Tailwind CSS (via CDN) + Tabler Icons + JavaScript vanilla. Tanpa build step.
+
+**Desain:** base netral (putih/abu/charcoal #1A1A1A), merah #C8102E sebagai aksen (CTA & ikon). Font: Poppins (heading), Inter (body), Playfair Display (aksen heading section).
 
 ## Struktur
 
 ```
 gtp-guard-website/
-├── index.html          # Beranda
-├── tentang.html        # Tentang (sejarah, visi, struktur organisasi, legalitas)
-├── layanan.html        # 6 kategori layanan
-├── portfolio.html      # Klien & mitra
-├── kontak.html         # Info kontak + form penawaran
+├── index.html          # Beranda (hero, stats, layanan, klien, CTA)
+├── tentang.html        # Sambutan, sejarah (timeline), struktur organisasi, legalitas
+├── layanan.html        # 6 kategori + sub-profesi
+├── portfolio.html      # Logo + daftar klien lengkap
+├── kontak.html         # Info kontak, form penawaran, peta
 └── assets/
-    ├── css/style.css   # Semua styling
+    ├── css/style.css   # Utility custom (reveal, hover, dotgrid)
     ├── js/main.js      # Nav mobile, scroll reveal, form handler
     └── img/            # (kosong) — taruh logo & foto asli di sini
 ```
 
-## Cara melihat lokal
+## Lihat lokal
 
-Buka `index.html` langsung di browser, atau jalankan server lokal:
+Buka `index.html` langsung di browser, atau:
 
 ```bash
 cd gtp-guard-website
-python3 -m http.server 8000
-# buka http://localhost:8000
+python3 -m http.server 8000   # buka http://localhost:8000
 ```
 
-## Cara hosting (gratis)
+## Hosting (gratis)
 
-- **Netlify**: drag & drop folder ini ke app.netlify.com/drop
-- **Vercel**: `vercel` di dalam folder, atau import via dashboard
-- **GitHub Pages**: push ke repo, aktifkan Pages dari branch `main`
+- **Netlify**: drag & drop folder ke app.netlify.com/drop
+- **Vercel**: `vercel` di dalam folder
+- **GitHub Pages**: sudah aktif → https://duniagelap134.github.io/gtp-guard-website/
 
 ## Yang masih placeholder / perlu diganti
 
-- **Logo**: saat ini pakai teks "GTP" + warna brand. Taruh file logo asli di `assets/img/` dan ganti elemen `.brand__mark`.
-- **Foto**: hero & section pakai gradient warna brand. Bisa tambah foto satpam/tim asli.
-- **Form kontak**: saat ini buka aplikasi email (mailto). Kalau mau form yang langsung masuk inbox tanpa buka email client, sambungkan ke Formspree / Netlify Forms (gratis).
-- **Logo klien**: ditampilkan sebagai teks. Bisa diganti gambar logo asli.
-- **Domain & social link**: link sosmed di footer masih `#`, isi dengan URL asli.
+- **Logo**: pakai ikon shield + teks "GTP Guard". Taruh logo asli di `assets/img/`.
+- **Foto**: hero pakai dark + glow merah, belum ada foto satpam/tim asli.
+- **Logo klien**: ditampilkan sebagai teks (Mandiri, BCA, dst). Bisa diganti gambar logo.
+- **Form kontak**: pakai `mailto`. Untuk lead langsung masuk inbox, sambungkan Formspree / Netlify Forms.
+- **Link sosmed & peta**: ikon sosmed di footer masih `#`. Peta pakai query "Labuapi, Lombok Barat" — bisa diganti koordinat persis kantor.
 
-## Catatan data
+## Catatan teknis
 
-Semua konten (sejarah, layanan, struktur organisasi, daftar klien, legalitas, kontak)
-diambil dari Company Profile GTP Guard 2025.
+Tailwind dipakai via Play CDN (zero-build). Untuk produksi skala besar, bisa di-compile pakai Tailwind CLI agar CSS-nya statis & tanpa warning CDN. Untuk landing page profiling ini, CDN sudah cukup.
+
+Semua konten diambil dari Company Profile GTP Guard 2025.
